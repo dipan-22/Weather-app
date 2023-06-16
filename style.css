@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+   
+    font-family:'Poppins', sans-serif;
+    
+}
+body{
+    background-color:rgb(211, 225, 196);
+}
+nav{
+    color: #ededed;
+}
+.container-fluid{
+    background-color: rgb(237, 240, 224);
+    font-weight: 600;
+    color: #ededed;
+    text-decoration-color: #ededed;
+}
