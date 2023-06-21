@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="padding: 0%;">
-        <div class="container-fluid" style="background-color: rgb(194, 245, 12);padding-top: 2px;padding-bottom: 2px;
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="padding: 0%; min-height: 20px;">
+        <div class="container-fluid" style="background-color: rgb(19, 228, 197);padding-top: 2px;padding-bottom: 2px;
         border-radius: 5px">
           <a class="navbar-brand" href="#" style="color: aliceblue;">Weather Finder</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +18,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <!--<li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
@@ -28,7 +28,7 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Major Cities
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu" id="drop">
                   <li><a class="dropdown-item" href="#">New York</a></li>
                   <li><a class="dropdown-item" href="#">London</a></li>
                   <li><hr class="dropdown-divider"></li>
@@ -39,11 +39,11 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled">How to find ?</a>
-              </li>-->
+              </li>
             </ul>
             <form class="d-flex" role="search">
               <input id="city"class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="background-color:rgb(206, 236, 136);border-radius: 2px;">
-              <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+              <button class="btn btn-outline-success" type="submit" id="submit" style="color:rgb(12, 12, 11);">Search</button>
             </form>
           </div>
         </div>
@@ -54,9 +54,9 @@
         <main>
             <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
               <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
-                  <div class="card-header py-3">
-                    <h4 class="my-0 fw-normal">Temaperature Information</h4>
+                <div class="card mb-4 rounded-3 shadow-sm" style="background-color: blanchedalmond;">
+                  <div class="card-header py-3" >
+                    <h4 class="my-0 fw-normal">Temperature Information</h4>
                   </div>
                   <div class="card-body">
                     <h1 class="card-title pricing-card-title"><span id="temp2"></span><small class="text-body-secondary fw-light"><sup><span style='font-size:20px;'>&#8451;</span></sup></small></h1>
@@ -71,9 +71,9 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card mb-4 rounded-3 shadow-sm"  style="background-color: blanchedalmond;">
                   <div class="card-header py-3">
-                    <h4 class="my-0 fw-normal">Humidity Information</h4>
+                    <h4 class="my-0 fw-normal ">Humidity Information</h4>
                   </div>
                   <div class="card-body">
                     <h1 class="card-title pricing-card-title"><span id="humidity2"></span>%<small class="text-body-secondary fw-light"></small></h1>
@@ -87,8 +87,26 @@
                   </div>
                 </div>
               </div>
+
               <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card mb-4 rounded-3 shadow-sm" style="background-color: blanchedalmond;">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal " >Wind Information</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><span id="wind_speed2"></span>%<small class="text-body-secondary fw-light"></small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Wind Speed is <span id="wind_speed"></span></li>
+                      <li>Wind Degrees  <span id="wind_degrees"></span></li>
+                      
+                    </ul>
+                    
+                  </div>
+                </div>
+              </div>
+              <!--
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-primary"style="background-color: blanchedalmond;">
                   <div class="card-header py-3 text-bg-primary border-primary">
                     <h4 class="my-0 fw-normal">Wind Information</h4>
                   </div>
@@ -97,15 +115,15 @@
                     <ul class="list-unstyled mt-3 mb-4">
                       <li>Wind Speed is <span id="wind_speed"></span></li>
                       <li>Wind Degrees  <span id="wind_degrees"></span></li>
-                     <!-- <li>Sunrise time is <span id="sunrise"></span></li>
-                      <li>Sunset time is <span id=""></span></li>-->
+                      <li>Sunrise time is <span id="sunrise"></span></li>
+                      <li>Sunset time is <span id=""></span></li>
                     </ul>
-                    <!--<button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>-->
+                    <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
                   </div>
                 </div>
               </div>
             </div>
-        <!--
+       
             <h2 class="display-6 text-center mb-4">Weather of major cities</h2>
         
             <div class="table-responsive">
